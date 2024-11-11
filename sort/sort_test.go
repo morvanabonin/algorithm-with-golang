@@ -16,16 +16,16 @@ func Test_Sort(t *testing.T) {
 			init: func(t *testing.T) []int {
 				return []int{9, 6, 5, 3, 8, 0, 4, 2, 7, 1}
 			},
-			inspect: func(nums []int, t *testing.T) {			
+			inspect: func(nums []int, t *testing.T) {
 				sort(nums)
 				expected := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 				if !reflect.DeepEqual(expected, nums) {
-					t.Errorf("For input %v, expected %v",  expected, nums)
+					t.Errorf("For input %v, expected %v", nums, expected)
 				}
 			},
 		},	
 		{
-			name: "size of the sleice",
+			name: "size of the slice",
 			init: func(t *testing.T) []int {
 				return []int{9, 6, 5, 3, 8, 0, 4, 2, 7, 1}
 			},
@@ -33,7 +33,7 @@ func Test_Sort(t *testing.T) {
 				sort(nums)
 				expected := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 				if len(nums) != len(expected) {
-					t.Fatalf("Expected %v but got %v", expected, nums)
+					t.Fatalf("Expected %v but got %v", nums, expected)
 				}
 			},
 
